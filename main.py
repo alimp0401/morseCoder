@@ -88,28 +88,30 @@ MorseCode['0'] = '-----'
 
 
 def decode_from_morse(code):
-	global MorseCode
-	text = ""
-	for code in code.split(" "):
-		text += list(MorseCode.keys())[list(MorseCode.values()).index(code)]
-	return text
+    global MorseCode
+    text = ""
+    for code in code.split(" "):
+        text += list(MorseCode.keys())[list(MorseCode.values()).index(code)]
+    return text
 
 
 def encode_to_morse(text):
-	global MorseCode
-	code = " ".join([MorseCode[letter] for letter in text.upper()])
-	return code
+    global MorseCode
+    code = " ".join([MorseCode[letter] for letter in text.upper()])
+    return code
 
 
 def main():
-	while True:
-		command = input("напишите З для закодировки, Р для раскодировки или С, чтобы остановиться: ")
-		if command == "З":
-			code = encode_to_morse(input())
-			print(code)
-		elif command == "Р":
-			text = decode_from_morse(input())
-			print(text)
-		else:
-			break
+    while True:
+        command = input("напишите З для закодировки, Р для раскодировки или С, чтобы остановиться: ")
+        if command == "З":
+            code = encode_to_morse(input())
+            print(code)
+        elif command == "Р":
+            text = decode_from_morse(input())
+            print(text)
+        else:
+            break
+
+
 main()
