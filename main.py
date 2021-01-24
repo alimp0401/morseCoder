@@ -1,4 +1,4 @@
-# writed by Alimpiev Egor and Pavel Ukilevich
+# writed by alimp0401 and Pavel Ukilevich
 MorseCode = {'А': '.-'}
 # MorseCode['B'] = '-...'
 # MorseCode['C'] = '-.-.'
